@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کارت دیجیتال قهوه الف</title>
+
+<!-- فونت فارسی وزیر -->
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<!-- فونت انگلیسی Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(135deg, #3e2723, #4e342e);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* ارتفاع کامل صفحه */
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* پس‌زمینه طرح‌دار */
+  body::before {
+    content: "☕";
+    font-size: 120px;
+    color: rgba(255,255,255,0.05);
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    transform: rotate(-15deg);
+    z-index: 0;
+  }
+  body::after {
+    content: "🍂";
+    font-size: 100px;
+    color: rgba(255,255,255,0.05);
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    transform: rotate(20deg);
+    z-index: 0;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    justify-content: center; /* وسط‌چین عمودی */
+    width: 100%;
+  }
+
+  .profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #d7b56d;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(215,181,109,0.5);
+    animation: float 4s ease-in-out infinite;
+  }
+  .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    margin: 5px 0;
+    color: #d7b56d;
+    text-shadow: 0 0 8px rgba(215,181,109,0.5);
+  }
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 90%;
+    max-width: 350px;
+    padding: 12px;
+    margin: 5px 0;
+    background: linear-gradient(135deg, #d7b56d, #b48832);
+    color: #3e2723;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+  }
+  .btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer {
+    margin-top: 20px; /* فاصله از آخرین دکمه */
+    font-size: 0.85rem;
+    color: #d7b56d;
+    opacity: 0.9;
+    z-index: 1;
+    text-align: center;
+  }
+  .footer a {
+    color: #d7b56d;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* حالت موبایل */
+  @media (max-width: 480px) {
+    .profile {
+      width: 120px;
+      height: 120px;
+    }
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 0.9rem; }
+    .btn { font-size: 0.95rem; padding: 10px; }
+    .btn img { width: 18px; height: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="content">
+  <div class="profile">
+    <img src="profile.jpg" alt="Coffee Allef">
+  </div>
+
+  <h1>قهوه الف</h1>
+  <h2>سرو تخصصی قهوه</h2>
+
+  <a class="btn" href="tel:09120581863">
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone"> تماس بگیرید
+  </a>
+  <a class="btn" href="https://nshn.ir/147bsGMTpxQN7n" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/535/535188.png" alt="Location"> آدرس کافه
+  </a>
+  <a class="btn" href="https://instagram.com/coffee_allef" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"> پیج اینستاگرام
+  </a>
+
+  <div class="footer">
+    طراحی و ساخت توسط <a href="https://instagram.com/qaabino" target="_blank">@qaabino</a>
+  </div>
+</div>
+
+</body>
+</html>
